@@ -17,7 +17,7 @@ system                                               /system      ext4    ro,bar
 vendor                                               /vendor      ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
 
 # Userdata
-/dev/block/bootdevice/by-name/userdata               /data        f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_xattr,inline_data      wait,check,latemount,formattable,quota,reservedsize=128M
+/dev/block/bootdevice/by-name/userdata               /data        f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_data      wait,check,latemount,formattable,quota,reservedsize=128M
 
 # Cache
 /dev/block/bootdevice/by-name/cache                  /cache       ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered                                     wait,check,formattable
