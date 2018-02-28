@@ -184,9 +184,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.qcril_uim_vcc_feature=1 \
     persist.vendor.radio.relay_oprt_change=1 \
     persist.vendor.radio.sw_mbn_update=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.build.vendorprefix=/vendor \
-    ro.telephony.iwlan_operation_mode=legacy
+    ro.telephony.iwlan_operation_mode=legacy \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ril.subscription.types=NV,RUIM \
