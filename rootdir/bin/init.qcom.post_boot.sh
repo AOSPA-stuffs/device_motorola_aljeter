@@ -69,10 +69,6 @@ function 8937_sched_dcvs_eas()
     echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
     echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
-    #set the hispeed_freq
-    echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-    #default value for hispeed_load is 90, for 8937 it should be 85
-    echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
 
 }
 
