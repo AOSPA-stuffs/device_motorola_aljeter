@@ -37,3 +37,6 @@
 
 # Radio
 /data/vendor/misc/cutback(/.*)?                          u:object_r:cutback_ipc_file:s0
+
+# WLAN fwpath
+/sys/module/wlan/parameters/fwpath    u:object_r:sysfs_wlan_fwpath:s0
