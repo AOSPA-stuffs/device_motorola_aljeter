@@ -299,9 +299,11 @@
 
     <!-- Doze mode -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
-    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="doze_proximity_check_before_pulse">true</bool>
+	<bool name="config_dozeAfterScreenOffByDefault">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="doze_display_state_supported">true</bool>
+    <bool name="doze_suspend_display_state_supported">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
@@ -348,6 +350,7 @@
 
     <!-- The list of components which should be automatically disabled for a specific device. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
     </string-array>
 
