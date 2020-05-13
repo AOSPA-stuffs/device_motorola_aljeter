@@ -59,6 +59,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
