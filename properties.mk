@@ -90,7 +90,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwc_set_default_colormode=true \
     ro.vendor.display.cabl=0 \
     vendor.display.disable_rotator_downscale=1 \
-    vendor.display.enable_default_color_mode=1
+    vendor.display.enable_default_color_mode=1 \
+    vendor.gralloc.disable_ahardware_buffer=1
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
