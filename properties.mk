@@ -127,11 +127,18 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.mm.enable.qcom_parser=4643 \
-    vendor.vidc.enc.narrow.searchrange=1 \
+    media.stagefright.audio.sink=280 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    vendor.mm.enable.qcom_parser=4176895 \
+    vendor.vidc.dec.downscalar_width=1920 \
+    vendor.vidc.dec.downscalar_height=1088 \
+    vendor.vidc.enc.disable_bframes=1 \
+    vendor.vidc.enc.disable_pframes=1 \
     vendor.vidc.enc.disable.pq=true \
+    vendor.vidc.enc.narrow.searchrange=1 \
+    vendor.video.disable.ubwc=1 \
     vendor.vidc.disable.split.mode=1 \
-    vendor.video.disable.ubwc=1
+    vidc.enc.disable.pq=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
