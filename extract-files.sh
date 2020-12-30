@@ -63,6 +63,11 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libcutils_shim.so" "${LIBCUTILS_SHIM}"
             done
             ;;
+
+        # Fix camera recording
+        vendor/lib/libmmcamera2_pproc_modules.so)
+            sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
+            ;;
     esac
 }
 
