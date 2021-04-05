@@ -330,7 +330,6 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so|f40ce3fe82f85dba57df0185cc42e491da58
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|d8303e587ac8cd79205ddf5e0627edefbc281561
 
 # Listen - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
-vendor/lib/hw/sound_trigger.primary.msm8937.so|305f7f8ba1ab05c464ef669cfaa6e5bd3432f73b
 vendor/lib/libadpcmdec.so|be5fdf08a08b635816381e61b6bbf2874c62f613
 vendor/lib/libgcs-calwrapper.so|c1e42b5db0be908052f19de3c3bfc5cee6819363
 vendor/lib/libgcs-ipc.so|33104e481daf5cf97720a6da812b09ed30aacaa1
@@ -339,7 +338,6 @@ vendor/lib/libgcs.so|5f65daa6f37c21bc4dc2c7cc42caaf7d338b70e3
 vendor/lib/liblistenjni.so|131a949c9e0d0baf31e179645b7edd86876b5761
 vendor/lib/liblistensoundmodel2.so|5f533ea9a7ea488dfc9f028b9a0a478e54255dd7
 vendor/lib/libsmwrapper.so|1ab31b5378265784145defa47d50435029cf5f57
-vendor/lib64/hw/sound_trigger.primary.msm8937.so|1a55a7258b7a9f4d9521f83298baa59a9dbb23f2
 vendor/lib64/libgcs-calwrapper.so|f8ea3485465c2bde8db75e79dc668598f2984214
 vendor/lib64/libgcs-ipc.so|008d8690fe30116526a91a90fde909f9f1f8a916
 vendor/lib64/libgcs-osal.so|c69df09e6521df8ae922893ec758014e978a52f7
