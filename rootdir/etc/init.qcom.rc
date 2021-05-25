@@ -372,6 +372,9 @@ service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     disabled
     oneshot
 
+on property:dev.bootcomplete=1
+    swapon_all /vendor/etc/fstab.qcom
+
 on property:sys.boot_completed=1
     start vendor.qcom-post-boot
 
