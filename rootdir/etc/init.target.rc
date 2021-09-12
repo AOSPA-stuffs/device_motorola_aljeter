@@ -106,6 +106,10 @@ service vendor.qseecomd /vendor/bin/qseecomd
     group root
 
 on boot
+
+    # Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
