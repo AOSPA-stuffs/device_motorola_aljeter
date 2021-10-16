@@ -1,4 +1,2 @@
 binder_call(system_app, storaged)
 binder_call(system_app, system_suspend)
-binder_call(system_app, hal_vibrator_default)
-binder_call(system_app, hal_power_default)
