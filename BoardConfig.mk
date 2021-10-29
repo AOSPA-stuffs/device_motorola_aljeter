@@ -63,6 +63,9 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
