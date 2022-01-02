@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libldacBT_bco
+
 # Camera
 PRODUCT_PACKAGES += \
     libbson.vendor \
