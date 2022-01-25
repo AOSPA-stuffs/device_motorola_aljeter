@@ -455,7 +455,6 @@ function configure_memory_parameters_DO_NOT_CALL() {
     # than LMK minfree's last bin value for all targets. It is calculated as
     # vmpressure_file_min = (last bin - second last bin ) + last bin
     #
-    # Set allocstall_threshold to 0 for all targets.
     #
 
 ProductName=`getprop ro.product.name`
@@ -555,9 +554,6 @@ else
             ;;
         esac
     fi
-
-    # Set allocstall_threshold to 0 for all targets.
-    echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
 
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
