@@ -208,6 +208,10 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8937
