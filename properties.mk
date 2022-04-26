@@ -183,6 +183,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
+# Skia
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.renderer=skiagl \
+    debug.renderengine.backend=skiaglthreaded \
+    renderthread.skia.reduceopstasksplitting=true \
+    debug.hwui.skia_atrace_enabled=false
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpt=2ec1 \
