@@ -119,6 +119,8 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
+vendor/lib64/libops.so
+vendor/lib64/libspl.so
 
 # DSP - from dpl_sprout - RKQ1.200928.002
 vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
