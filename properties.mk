@@ -114,6 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=0 \
     debug.sf.hw=0 \
     debug.cpurend.vsync=false \
+    debug.sf.disable_client_composition_cache=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     dev.pm.dyn_samplingrate=1 \
