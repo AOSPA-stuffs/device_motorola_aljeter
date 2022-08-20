@@ -12,6 +12,7 @@ persist.partial.skip u:object_r:camera_prop:s0
 ro.camera. u:object_r:camera_prop:s0
 ro.product.nopefacturer u:object_r:camera_prop:s0
 persist.vendor.camera.daemon u:object_r:vendor_default_prop:s0
+persist.debug.sf.showfps                u:object_r:camera_prop:s0
 
 # Wcnss
 vendor.wlan.driver.ath u:object_r:vendor_default_prop:s0
