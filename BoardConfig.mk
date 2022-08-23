@@ -143,6 +143,9 @@ TARGET_USES_INTERACTION_BOOST := true
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
 
+# Product
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
