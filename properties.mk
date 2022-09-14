@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=pronto \
-    bluetooth.device.default_name=Moto G6 Play
+    bluetooth.device.default_name=Moto G6 Play \
+    bluetooth.hardware.power.operating_voltage_mv=3300
 
 # Blur
 PRODUCT_PROPERTY_OVERRIDES += \
