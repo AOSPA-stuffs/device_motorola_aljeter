@@ -200,6 +200,7 @@ vendor/lib/egl/libGLESv2_adreno.so|cd95e3dce59b222d1b1049277becc9f734a89f97
 vendor/lib/egl/libQTapGLES.so|957d9c98f3c29e7bf1da02fedac0789ada49dc70
 vendor/lib/egl/libq3dtools_adreno.so|b4b7bda387620de5f6ea2a29406f9351e855b8ed
 vendor/lib/libC2D2.so|c04a5ac1e576f63ebe91aba14bf917ee9e382be0
+vendor/lib/libc2d30-a3xx.so|f27d63012451687d1e55c443cc1857992cdb126835691ba39d856f4a75cbe5e1
 vendor/lib/libCB.so|6574501e0e342bac74044afc48b33f5119712417
 vendor/lib/libOpenCL.so|9ee3900265f9b855f526c0ce4fcfdaed51d62003
 vendor/lib/libRSDriver_adreno.so|374bce395a719d37638f8e92a4abd691f632298f
