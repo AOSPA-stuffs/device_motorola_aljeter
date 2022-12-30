@@ -49,6 +49,10 @@ function blob_fixup() {
             "${PATCHELF}" --set-soname keystore.msm8937.so "${2}"
             ;;
 
+	vendor/lib/libmmcamera_ppeiscore.so)
+	    "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+	    ;;
+
         vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
             sed -i "s/libgui/libwui/" "${2}"
             ;;

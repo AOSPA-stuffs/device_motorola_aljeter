@@ -769,7 +769,7 @@ vendor/lib/libmmcamera_vstab_module.so
 
 # Camera - from vince
 vendor/lib/libseemore.so|8fc2ae17c7364f789bda71b20a2fba006f9568c8
-vendor/lib/libmmcamera_ppeiscore.so|c11c089d564b0a026c9792b25ec254ce6dd255c1
+vendor/lib/libmmcamera_ppeiscore.so|6c6665aad61356da60ffd9b860145cb929cd85a1
 vendor/lib/libllvd_smore.so|740de4c339772df80858ddd9390f91ead71eadeb
 vendor/lib/libmmcamera_sw_tnr.so|59b0f350eb0cfa85399c296af14ac680ca99705e
 vendor/lib/libchromaflash.so|cf85560822e04014b8950a1abae9c2843069101d
