@@ -7,12 +7,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/msm8937-common/msm8937-common-vendor.mk)
+$(call inherit-product, vendor/motorola/aljeter/aljeter-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -29,12 +27,10 @@ PRODUCT_COPY_FILES += \
 
 # DEX
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
+    Settings
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8937 \
     audio.r_submix.default \
@@ -45,9 +41,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio.effect@6.0-impl:32 \
-    android.hardware.bluetooth.audio@2.1-impl:32
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -61,15 +57,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libldacBT_bco
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Camera
 PRODUCT_PACKAGES += \
-    libbson.vendor \
     Snap \
     libstdc++.vendor \
     libwui
@@ -82,6 +75,10 @@ PRODUCT_PACKAGES += \
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+
+# Doze
+PRODUCT_PACKAGES += \
+    MotoDoze
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -106,6 +103,11 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     vendor.display.config@1.3 \
     vendor.display.config@1.3.vendor
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -160,6 +162,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_WIDTH := 720
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -198,15 +204,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
-    $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
-
-# MotoActions
-ifeq ($(filter %ahannah %rhannah,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    MotoActions
-endif
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -249,19 +249,18 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml
 
-ifeq ($(filter %ahannah %james %rhannah,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml
-endif
 
-ifeq ($(filter %james %rhannah,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
-endif
+
+# IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-egis.idc
 
 # Power
 PRODUCT_PACKAGES += \
@@ -317,12 +316,14 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.device.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qcom.sensors.sh
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -342,7 +343,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@1.0-service
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -352,7 +353,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/msm8996
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -367,7 +369,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    $(LOCAL_PATH)/configs/thermal/thermal-engine-aljeter.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-aljeter.conf
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -375,13 +378,15 @@ PRODUCT_PACKAGES += \
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+
+# Always preopt extracted APKs to prevent extracting out of the APK
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 DONT_DEXPREOPT_PREBUILTS := true
 USE_DEX2OAT_DEBUG := false
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # USB
 PRODUCT_PACKAGES += \

@@ -1,6 +1,6 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1
+    af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
@@ -17,8 +17,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio_hal.period_size=240 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.feature.anc_headset.enable=true \
     vendor.audio.feature.compr_voip.enable=true \
     vendor.audio.feature.custom_stereo.enable=true \
@@ -65,9 +63,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=pronto
 
-# BPF
+# Blur
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.ebpf.supported=true
+    ro.surface_flinger.supports_background_blur=0
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -88,10 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.cne.feature=1
-
-# Crypto
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -226,7 +220,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.facing=false \
     ro.vendor.sensors.scrn_ortn=false \
     ro.vendor.sensors.cmc=false \
-    ro.vendor.sensors.pedometer=false
+    ro.vendor.sensors.pedometer=false \
+    ro.hardware.sensors=aljeter
 
 # Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \

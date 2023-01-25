@@ -15,9 +15,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter ahannah cedric hannah james montana rhannah jeter,$(TARGET_DEVICE)),)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),aljeter)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 

@@ -4,14 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/motorola/msm8937-common
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8937
-TARGET_NO_BOOTLOADER := true
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8937
+DEVICE_PATH := device/motorola/aljeter
 
 # Architecture
 TARGET_ARCH := arm64
@@ -27,7 +20,8 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-BUILD_BROKEN_DUP_RULES := true
+# Assert
+TARGET_OTA_ASSERT_DEVICE := aljeter
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -55,15 +49,22 @@ BOARD_SUPPORTS_SOUND_TRIGGER := false
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
+TARGET_NO_BOOTLOADER := true
 
-# Boot animation
-TARGET_BOOTANIMATION_HALF_RES := true
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+
+# Build
+BUILD_BROKEN_DUP_RULES := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
+
+# Display
+TARGET_SCREEN_DENSITY := 300
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -71,15 +72,10 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
-
 # GPS
 LOC_HIDL_VERSION := 4.0
 
 # GPU
-TARGET_DISABLE_POSTRENDER_CLEANUP := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
@@ -87,44 +83,49 @@ TARGET_USES_ION := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE   := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_FS_CONFIG_GEN += \
-    $(COMMON_PATH)/config.fs \
-    $(COMMON_PATH)/mot_aids.fs
+    $(DEVICE_PATH)/config.fs \
+    $(DEVICE_PATH)/mot_aids.fs
 
 # Kernel
-BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=400M androidboot.usbconfigfs=true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+
+BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x1000000
+
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
+TARGET_KERNEL_CONFIG := aljeter_defconfig
 TARGET_KERNEL_VERSION := 4.9
 
-# Clang
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := proton
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/proton-clang
-
+# LLVM
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+    LLVM=1 \
+    LLVM_IAS=1
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2516582400
 BOARD_VENDORIMAGE_PARTITION_SIZE := 419430400
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 18976768
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 27124546560
+
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -133,26 +134,24 @@ BOARD_RAMDISK_USE_XZ := true
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Platform
+TARGET_BOARD_PLATFORM := msm8937
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
-ifeq ($(PRODUCT_FULL_TREBLE_OVERRIDE), true)
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_legacy.qcom
-else
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
-endif
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_motorola
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
+# Security patch level
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
@@ -172,4 +171,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/motorola/msm8937-common/BoardConfigVendor.mk
+include vendor/motorola/aljeter/BoardConfigVendor.mk
