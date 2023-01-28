@@ -26,14 +26,6 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-        system_ext/etc/permissions/qcrilhook.xml)
-            sed -i "s|/product/framework/|/system_ext/framework/|g" "${2}"
-            ;;
-
-        system_ext/etc/permissions/telephonyservice.xml)
-            sed -i "s|/system/product/framework/|/system_ext/framework/|g" "${2}"
-            ;;
-
         # memset shim
         vendor/bin/charge_only_mode)
             for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
@@ -59,12 +51,6 @@ function blob_fixup() {
 
         vendor/lib64/libmdmcutback.so)
             sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
-            ;;
-
-        vendor/lib64/libril-qc-qmi-1.so)
-            for LIBCUTILS_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libcutils_shim.so" "${LIBCUTILS_SHIM}"
-            done
             ;;
 
         # Fix camera recording

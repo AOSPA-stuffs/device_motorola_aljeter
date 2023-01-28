@@ -60,11 +60,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cnd.iwlan=1 \
-    persist.vendor.cne.logging.qxdm=3974
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.vendor.cne.feature=1
+    persist.vendor.cne.feature=1 \
+    persist.vendor.mwqem.enable=1
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -79,12 +76,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fastbootd.available=true
 
-# Debug
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
-
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwc_set_default_colormode=true \
@@ -97,10 +88,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false
 
-# Fm
+# IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false \
-    ro.vendor.fm.use_audio_session=true
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.disableADBLogs=1 \
+    persist.vendor.ims.disableDebugDataPathLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableSigHandler=1 \
+    persist.vendor.ims.disableQXDMLogs=1
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -150,44 +145,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ims.dropset_feature=0 \
-    persist.vendor.ims.disableADBLogs=0 \
-    persist.vendor.ims.disableDebugDataPathLogs=0 \
-    persist.vendor.ims.disableDebugLogs=0 \
-    persist.vendor.ims.disableIMSLogs=0 \
-    persist.vendor.ims.disableQXDMLogs=1 \
-    persist.vendor.ims.vt.enableadb=1 \
-    persist.vendor.radio.0x9e_not_callname=1 \
-    persist.vendor.radio.adb_log_on=0 \
-    persist.vendor.radio.add_power_save=1 \
-    persist.vendor.radio.aosp_usr_pref_sel=true \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.cs_srv_type=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.dfr_mode_set=1 \
-    persist.vendor.radio.eri64_as_home=1 \
-    persist.vendor.radio.flexmap_type=none \
-    persist.vendor.radio.jbims=1 \
-    persist.vendor.radio.lte_vrte_ltd=1 \
-    persist.vendor.radio.msgtunnel.start=true \
-    persist.vendor.radio.mt_sms_ack=30 \
-    persist.vendor.radio.no_wait_for_card=1 \
-    persist.vendor.radio.oem_ind_to_both=0 \
-    persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.qcril_uim_vcc_feature=1 \
-    persist.vendor.radio.relay_oprt_change=1 \
-    persist.vendor.radio.sw_mbn_update=1 \
-    ro.build.vendorprefix=/vendor \
-    ro.telephony.iwlan_operation_mode=legacy \
-    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ril.subscription.types=NV,RUIM \
-    telephony.lteOnCdmaDevice=1 \
-
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sar_sensor=1 \
@@ -205,6 +162,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
     ro.soc.model=MSM8937
+
+# Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.block_binder_thread_on_incoming_calls=false \
+    ro.telephony.call_ring.multiple=false \
+    service.qti.ims.enabled=1 \
+    telephony.lteOnCdmaDevice=1 \
+    vendor.service.qti.ims.enabled=1 \
+    ro.telephony.default_network=22,22
+
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.radio.aosp_usr_pref_sel=true \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.enableadvancedscan=false \
+    persist.vendor.radio.hw_mbn_update=0 \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.sib16_support=1
+
+# Radio (IMS)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
