@@ -1,2 +1,4 @@
 allow fsck modem_efs_partition_device:blk_file rw_file_perms;
 dontaudit fsck self:capability { dac_override dac_read_search };
+
+allow fsck self:capability { kill sys_admin };

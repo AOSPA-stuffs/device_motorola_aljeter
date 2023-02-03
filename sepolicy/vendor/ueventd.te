@@ -2,3 +2,13 @@ allow ueventd sysfs_devices_fingerprint:file rw_file_perms;
 allow ueventd self:capability sys_nice;
 
 allow ueventd qti_debugfs:dir { relabelto };
+allow ueventd unlabeled:dir { search };
+allow ueventd debugfs:dir { read getattr };
+allow ueventd debugfs:dir open;
+allow ueventd unlabeled:file { read getattr };
+allow ueventd unlabeled:file open;
+dontaudit ueventd debugfs:file { getattr open read };
+dontaudit ueventd ueventd:capability { kill };
+allow ueventd debugfs:dir { relabelfrom };
+allow ueventd debugfs_wakeup_sources:file { open read getattr };
+allow ueventd self:capability kill;

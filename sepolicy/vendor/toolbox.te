@@ -1,0 +1,2 @@
+allow toolbox toolbox:capability { sys_admin kill };
+allow toolbox rootfs:dir read;

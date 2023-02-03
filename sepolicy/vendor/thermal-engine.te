@@ -1,2 +1,4 @@
 r_dir_file(thermal-engine, sysfs)
 r_dir_file(thermal-engine, sysfs_vadc_dev)
+
+allow thermal-engine self:capability sys_admin;
