@@ -369,10 +369,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libui_shim \
-    libcutils_shim \
-    libmemset_shim \
-    libqsapshim
+    libui_shim
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -414,7 +411,6 @@ PRODUCT_COPY_FILES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
-    libqsap_sdk \
     wcnss_service
 
 PRODUCT_PACKAGES += \

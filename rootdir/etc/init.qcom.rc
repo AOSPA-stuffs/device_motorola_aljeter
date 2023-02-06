@@ -396,6 +396,12 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
 on charger
     setprop persist.sys.usb.config charging
 
+service charger /system/bin/charger
+    class charger
+    group system graphics
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
 service vendor.time_daemon /vendor/bin/time_daemon
     class main
     user system

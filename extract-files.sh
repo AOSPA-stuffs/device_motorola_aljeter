@@ -26,21 +26,6 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-        # memset shim
-        vendor/bin/charge_only_mode)
-            for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libmemset_shim.so" "${LIBMEMSET_SHIM}"
-            done
-            ;;
-
-        vendor/lib64/hw/gatekeeper.msm8937.so)
-            "${PATCHELF}" --set-soname gatekeeper.msm8937.so "${2}"
-            ;;
-
-        vendor/lib64/hw/keystore.msm8937.so)
-            "${PATCHELF}" --set-soname keystore.msm8937.so "${2}"
-            ;;
-
 	vendor/lib/libmmcamera_ppeiscore.so)
 	    "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
 	    ;;
@@ -49,11 +34,6 @@ function blob_fixup() {
             sed -i "s/libgui/libwui/" "${2}"
             ;;
 
-        vendor/lib64/libmdmcutback.so)
-            sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
-            ;;
-
-        # Fix camera recording
         vendor/lib/libmmcamera2_pproc_modules.so)
             sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
             ;;
