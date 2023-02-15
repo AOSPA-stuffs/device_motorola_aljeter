@@ -8,6 +8,5 @@ allow mm-qcamerad vendor_data_file:dir r_dir_perms;
 allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 
 allow mm-qcamerad diag_device:chr_file { open read write };
-allow mm-qcamerad vendor_default_prop:property_service set;
 
 get_prop(mm-qcamerad, camera_prop)
