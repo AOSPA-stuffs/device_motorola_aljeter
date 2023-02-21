@@ -17,6 +17,15 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
+# Dynamic
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -307,7 +316,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    fstab_ramdisk.qcom \
+    fstab.qcom_ramdisk \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.msm.usb.configfs.rc \

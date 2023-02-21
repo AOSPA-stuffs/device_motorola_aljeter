@@ -12,11 +12,9 @@
 # Recovery
 /dev/block/bootdevice/by-name/recovery               /recovery    emmc    defaults                                                                           defaults
 
-# System
-/dev/block/platform/soc/7824900.sdhci/by-name/system /system      ext4    ro,barrier=1,discard                                                               wait,first_stage_mount
-
-# Vendor
-/dev/block/platform/soc/7824900.sdhci/by-name/vendor /vendor      ext4    ro,barrier=1,discard                                                               wait,first_stage_mount
+# Logical
+system                                               /system      ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
+vendor                                               /vendor      ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
 
 # Userdata
 /dev/block/bootdevice/by-name/userdata               /data        f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_xattr,inline_data      wait,check,latemount,formattable,quota,reservedsize=128M
