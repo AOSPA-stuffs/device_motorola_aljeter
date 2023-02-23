@@ -35,7 +35,7 @@ function blob_fixup() {
 	    ;;
 
         vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
-            sed -i "s/libgui/libwui/" "${2}"
+            sed -i 's|libgui.so|libwui.so|g' "${2}"
             ;;
 
         vendor/lib/libmmcamera2_pproc_modules.so)

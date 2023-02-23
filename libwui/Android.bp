@@ -1,5 +1,0 @@
-cc_library {
-    name: "libwui",
-    shared_libs: ["libgui_vendor"],
-    vendor: true,
-}
