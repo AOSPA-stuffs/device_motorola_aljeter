@@ -1,9 +1,6 @@
 genfscon debugfs /rmt_storage u:object_r:debugfs_rmt:s0
 genfscon debugfs /wlan0   u:object_r:debugfs_wlan:s0
 
-# Camera
-genfscon sysfs /devices/virtual/input/input7 u:object_r:sysfs_laser:s0
-
 # Capsense
 genfscon sysfs /class/capsense u:object_r:sysfs_capsense:s0
 genfscon sysfs /class/input/input5/capsense_top u:object_r:sysfs_capsense:s0
