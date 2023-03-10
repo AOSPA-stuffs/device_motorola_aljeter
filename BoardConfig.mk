@@ -101,6 +101,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 TARGET_KERNEL_CONFIG := aljeter_defconfig
+TARGET_KERNEL_RECOVERY_CONFIG := aljeter_recovery_defconfig
 TARGET_KERNEL_VERSION := 4.9
 
 # LLVM
