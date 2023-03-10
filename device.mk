@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    MotoDoze
+    Doze
 
 # Display
 PRODUCT_PACKAGES += \
