@@ -1337,11 +1337,11 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 # Sensors
 vendor/bin/capsense_reset
 
-# Thermal - from dpl_sprout - RKQ1.200928.002
-vendor/bin/thermal-engine|bacf88c801ba037e1e1d2671937404184eb8964b
-vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
-vendor/lib/libthermalclient.so|61becb3664bb8b445cec53c2f173af82ed1ad7ae
-vendor/lib64/libthermalclient.so|8f2411404f56c6d15e6a185124bbc7f8c2adf195
+# Thermal - from LA.UM.10.6.2.r1-02500-89xx.0
+vendor/bin/thermal-engine|f22c96de880a0641c0ba65b78a95a0edfaf94f67
+vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
+vendor/lib/libthermalclient.so|85e917c26673807f354d7856968c6d7fb870b1f5
+vendor/lib64/libthermalclient.so|f13f506053977ef8afa70129abb2af70c66deab0
 
 # Time services - from dpl_sprout - RKQ1.200928.002
 -vendor/app/TimeService/TimeService.apk|7c61c4257a39c7aec7992a134a08dcd46a953c96
