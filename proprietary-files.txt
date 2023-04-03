@@ -1085,10 +1085,10 @@ vendor/lib/libOmxWmaDec.so|c47e74a73afa486429c009f338779cd78566f77c
 vendor/lib/libvqzip.so|f85628ea634df1c31d69380d960ad7ea3396e7b2
 vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 
-# Media OMX - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
--vendor/lib/libMpeg4SwEncoder.so|4724c498d1949dbcd19d73b8ef7279d49f09b0d9
--vendor/lib/libOmxSwVdec.so|30a6eeebd47fbe17aecc92af7fd3dee8848e8bc1
--vendor/lib/libOmxSwVencMpeg4.so|eda2bef01841815a7a165ea2280c88cf0e080045
+# Media OMX - from LA.UM.10.6.2.r1-02500-89xx.0
+-vendor/lib/libMpeg4SwEncoder.so|b2c80ebcc6120c28576f1786d777eb95c02e4bc8
+-vendor/lib/libOmxSwVdec.so|6315cb84f8d15540f3b577646b243eb0bfb4be78
+-vendor/lib/libOmxSwVencMpeg4.so|577598f797ad6d18bf80279760a4c02bbcb2c532
 
 # Perf - from dpl_sprout - RKQ1.200928.002
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|6b8f077dc724a202f3fc91c0255f88ad45cbdb62
