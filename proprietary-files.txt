@@ -49,6 +49,9 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 
+# ANT+ - from deen_sprout PPKS29.68-16-36-13
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|ce9b89df917622cf1e0e58aa3b3be6e410c4c2d7
+
 # Audio ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
 vendor/etc/acdbdata/General_cal.acdb
@@ -92,14 +95,18 @@ vendor/lib/libvideoutils.so
 vendor/lib/libzxingcpp.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 
-# Bluetooth - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|ce9b89df917622cf1e0e58aa3b3be6e410c4c2d7
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a6fa0b97864e41f36c7d859612d2b24c14bc1597
-vendor/lib64/libbtnv.so|f467a39938b8e76e3dea295ef412e69b6402254f
-vendor/lib64/libbt-hidlclient.so|e7cc68021ff2a38728a50c92914420ba61d2c5c3
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d91961831f
+# Bluetooth - from LA.UM.10.6.2.r1-02500-89xx.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|34317bdfb200d3e0e09a49ffbb978804c4363407
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|f9ae8ef97f30f056bede0660e96c8c37a51abfa8
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|37ff9b84e9b3563b091f822bf26f9f514a53586c
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|82c587746c8f256e2d943d0d5d20fa473892e704
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|e713e45138e9ad5205694719c3d3e851a7fe6cea
+vendor/lib64/libbt-hidlclient.so|0916996d7449c1ddfe5af3ba9d2dbf87f87988d6
+vendor/lib64/libbtnv.so|c652181b2ae218c958a49e615371b5187e7c4b88
+vendor/lib64/libsoc_helper.so|6d49890e8c978eb34474c413c7d253edd35e3ab3
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|b4ed4f178204e6a4a2706917b7e7d467dff6a56e
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|c3a4cd2cbfe14578d72381f0743a97ba62fd5957
 
 # Bluetooth (aptX) - from crosshatch - RQ3A.210605.005
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
@@ -910,6 +917,9 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|8c5a8f0bec5942dc3527
 
 # Gatekeeper (hardware)
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|3125e1bad9e8231df1628d909ba514b250835a7d
+
+# FM - from deen_sprout PPKS29.68-16-36-13
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d91961831f
 
 # GPS - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|d458a2aadc1d00df4696d6793e550f4a9422a2c9
