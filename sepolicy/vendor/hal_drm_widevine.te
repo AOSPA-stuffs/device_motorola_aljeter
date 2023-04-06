@@ -1,0 +1,2 @@
+allow hal_drm_widevine unlabeled:dir { search read };
+allow hal_drm_widevine unlabeled:file { read open getattr };

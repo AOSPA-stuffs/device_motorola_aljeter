@@ -849,22 +849,34 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|000e0d2ac4450c0ad8baca06985bc
 vendor/lib64/vendor.qti.latency@2.0.so|44e613964229ad11c5a69d1861b24f5897eff1d7
 vendor/lib64/vendor.qti.latency@2.1.so|3f5e3be5fcbc96b5f4c87dd76cfcc0e1dc858ad0
 
-# DRM and SEE - from dpl_sprout - RKQ1.200928.002
-vendor/bin/qseecomd|04e6aea39b5a357836310b4e3d5cd757a786ec4e
-vendor/lib/libQSEEComAPI.so|e30192367fb5f9ccd9f281d9e6e38fbaddfdd77b
-vendor/lib64/libGPreqcancel.so|cef7983d5aceb03b4c422731c838ead1a8f3fed4
-vendor/lib64/libGPreqcancel_svc.so|817fced1daa7913b363fdbebf2e0587e1f34b8eb
-vendor/lib64/libQSEEComAPI.so|86252d1363ce220cf213f02636495f41904e7ddd
-vendor/lib64/libStDrvInt.so|add517206707a8bd7f116b6b1554a16c51fe6668
-vendor/lib64/libdrmfs.so|0af7d14a3d9f906d2c95650ca748399882e746cc
-vendor/lib64/libdrmtime.so|beac981103d7e61cf58be46f0729ec123f56b629
-vendor/lib64/libqisl.so|529d7e20bb33147fe3404c1a58d266e49228046a
-vendor/lib64/librpmb.so|98c96895dbf6c7ab8791c76a9109a89cc692b85b
-vendor/lib64/libsecureui.so|172515cb527477c4669c43529628586aeee264bc
-vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
-vendor/lib64/libssd.so|1e2243f7eb5d36544a5ae51166d748b7b30e63c6
+# DRM - from LA.UM.10.6.2.r1-02500-89xx.0
+vendor/bin/qseecomd|47fd303d29b881a4164e6b7471d93f33c3261c3e
+vendor/lib/libQSEEComAPI.so|48086bfa5658d789d1c7df63b5403342cdefb7a0
+vendor/lib64/libGPreqcancel.so|85bd5c16f107b7fbfccf506386e52e41d53d67e7
+vendor/lib64/libGPreqcancel_svc.so|6552d13663398ca2f7dc978151ca2ad0f378b020
+vendor/lib64/libQSEEComAPI.so|f723feb6d111c68f10dca13ab4d1ad0b90cf6aa1
+vendor/lib64/libSecureUILib.so|c2de7af8cec63cea86dcb0bcb0ec242ab55e5638
+vendor/lib64/libStDrvInt.so|1ae2e2e25f97fc064ec2d40a09d6dff30290dd26
+vendor/lib64/libcpion.so|17f41ed149554f77c70aec215f60f3633c1889c8
+vendor/lib64/libdrmfs.so|5beee64a0d18977b7174d859bb85091dfadc9127
+vendor/lib64/libdrmtime.so|2fe9bc426cbe2163d1b1524b69d7ce3d5f83c365
+vendor/lib64/libhdcpsrm.so|8af6646f328531b4299a90f31acc9b874ad6f7a3
+vendor/lib64/liboemcrypto.so|cff69ca64f9015e17cdcc2c45c992d262d864013
+vendor/lib64/libqisl.so|cf0d6f091fefb95f482f6ea5dfd98755bf816f63
+vendor/lib64/librpmb.so|5d9622eb99a402f0adf8c8b47d08e58922a2d65f
+vendor/lib64/libsecureui.so|acb4db6510ac609c089764e086398f4ae2dd35cd
+vendor/lib64/libsecureui_svcsock.so|59b3357686dceeec83c478f0dfdeecb28f6e17a1
+vendor/lib64/libssd.so|56a389bf3dcdd19254c7b944b5dc984abe940033
+
+# DRM - from Coral - 12/SQ1A.220105.002/7961164
 vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
 vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
+
+# DRM - Widevine - from LA.UM.10.6.2.r1-02500-89xx.0
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0789856c51366175e1e7878e378f586c3eca7bd9
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib64/libwvhidl.so|88780dbc2e14e4e1ff6171085fa0b37fbc8d64f2
 
 # Display QDCMs
 vendor/etc/qdcm_calib_data_mipi_mot_video_djn_hd_570.xml
@@ -903,12 +915,6 @@ vendor/lib64/sensor_calibrate.so|efb71205c08557d2961eff9c7bff20ca89a816d0
 vendor/lib64/sensors.rp.so|45fa1cc519a5fbc7ad359f406f3d125cae54aadc
 vendor/lib64/sensors.ssc.so|60fd557a52a70580b3dda1662820ba315b8b7411
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|e87c7e158e0b12a2fe6abcc3fded9fcff91fa989
-
-# DRM - Qualcomm Trusted Execution Enviornment - from dpl_sprout - RKQ1.200928.002
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|f8dc88c7166ffc2c1d997e7d5f16a8eb69c37cfc
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|b3458f1507146fe99f2f70ed1883ae1ceb2e17bb
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|29130d7b0050885a6b455390a02a8615563403c4
 
 # Gatekeeper - from deen_sprout QPKS30.54-22-12
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eeb4ba9eacb57c958051a47d307968254ee081d0
@@ -1337,6 +1343,12 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 # Sensors
 vendor/bin/capsense_reset
 
+# TUI - from LA.UM.10.6.2.r1-02500-89xx.0
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|077cb264310cae5f11f3da047cf86b0e25744cdf
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|aa13712af4235579492343fd1fd2e74775b91ad2
+
 # Thermal - from LA.UM.10.6.2.r1-02500-89xx.0
 vendor/bin/thermal-engine|f22c96de880a0641c0ba65b78a95a0edfaf94f67
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
@@ -1348,20 +1360,6 @@ vendor/lib64/libthermalclient.so|f13f506053977ef8afa70129abb2af70c66deab0
 vendor/bin/time_daemon|e62d164b8c8b30743837896d4c5e8bca39b364e6
 vendor/etc/init/init.time_daemon.rc|a89ed147a681b30ecf5e78dd2df6b18e1bf7a18b
 vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
-
-# TUI - from dpl_sprout - RKQ1.200928.002
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|e8d97981d09a4e34907d13bcbbd10f03572c9218
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|960561ba01e28777e099294fb0a9a749e2b2a775
-
-# Widevine - from dpl_sprout - RKQ1.200928.002
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine|92e4797cb000e86ba74fba9da2c014d7ec8fa1a6
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
-vendor/lib64/libcpion.so|388b27050e97bdfdee0d98428f223611b761f252
-vendor/lib64/libhdcpsrm.so|85c4b0f714b3946d94d32811d4c85ad2dd244d65
-vendor/lib64/liboemcrypto.so|0ed2cd7b6d34d2043956a7643b22c0fc212282b1
-vendor/lib64/libwvhidl.so|61b056c74731122836e57f1110f2174fd05cbfdb
 
 # Wi-Fi
 vendor/bin/cnss-daemon
