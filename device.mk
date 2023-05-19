@@ -12,7 +12,16 @@ $(call inherit-product, vendor/motorola/aljeter/aljeter-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Runtime Resource (RRO) Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayAljeter \
+    SettingsOverlayAljeter \
+    SystemUIOverlayAljeter \
+    TetheringConfigOverlayAljeter \
+    TelephonyOverlayAljeter \
+    WifiOverlayAljeter
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -305,7 +314,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
     librmnetctl \
     libsensorndkbridge \
     qti-telephony-hidl-wrapper \
@@ -367,10 +375,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
@@ -407,8 +411,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libwpa_client \
     libqsap_sdk \
-    wcnss_service \
-    WifiOverlay
+    wcnss_service
 
 PRODUCT_PACKAGES += \
     hostapd \
