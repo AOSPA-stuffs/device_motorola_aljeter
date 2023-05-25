@@ -143,7 +143,6 @@ BOARD_USES_QCOM_HARDWARE := true
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_motorola
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
