@@ -988,7 +988,7 @@ vendor/lib/egl/libGLESv2_adreno.so|cd95e3dce59b222d1b1049277becc9f734a89f97
 vendor/lib/egl/libQTapGLES.so|957d9c98f3c29e7bf1da02fedac0789ada49dc70
 vendor/lib/egl/libq3dtools_adreno.so|b4b7bda387620de5f6ea2a29406f9351e855b8ed
 vendor/lib/libC2D2.so|c04a5ac1e576f63ebe91aba14bf917ee9e382be0
-vendor/lib/libc2d30-a3xx.so|f27d63012451687d1e55c443cc1857992cdb126835691ba39d856f4a75cbe5e1
+vendor/lib/libc2d30-a3xx.so|abd44619c1d202f71f803951b81bf46ab162fb47
 vendor/lib/libCB.so|6574501e0e342bac74044afc48b33f5119712417
 vendor/lib/libOpenCL.so|9ee3900265f9b855f526c0ce4fcfdaed51d62003
 vendor/lib/libadreno_utils.so|3a09e6720121f5b459a1fc7f9639b632da5832ec
@@ -1143,8 +1143,8 @@ vendor/lib64/vendor.display.color@1.1.so|3e05113d52f1fc3b1938cb04491b441502f8ece
 vendor/lib64/vendor.display.color@1.2.so|3934b711a70b026ea9396408ab0ea330851218c2
 vendor/lib64/vendor.display.postproc@1.0.so|cd36d0796c6631d25056fdc5cb28a50219620e04
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|4c130641f85b8707acbc852eadcc480883396fdc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdisp-aba.so|0620cb7c70c36de2757a34ae3bf545044ec6c34c
+vendor/lib64/libdisplayconfig.qti.so|e2a3971b331620828a6a7163b15170aad9935754
 
 # QMI (diag) - from LA.UM.9.6.3.r1-06200-89xx.0
 system_ext/lib64/libdiag_system.so|1e0006fd3be67cbb50fb28ecfec028bddcead4fe
