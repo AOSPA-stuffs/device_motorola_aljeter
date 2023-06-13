@@ -114,7 +114,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=0 \
     debug.cpurend.vsync=false \
     debug.sf.disable_client_composition_cache=1 \
-    debug.sf.auto_latch_unsignaled=true \
     debug.sf.recomputecrop=0 \
     dev.pm.dyn_samplingrate=1 \
     persist.hwc.mdpcomp.enable=true \
@@ -149,13 +148,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
 
-# QTI
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.va_aosp.support=1
-
-PRODUCT_ODM_PROPERTIES += \
-    ro.vendor.qti.va_odm.support=1
-
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sar_sensor=1 \
@@ -171,7 +163,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.manufacturer=Qualcomm \
     ro.soc.model=MSM8937
 
 # Telephony
