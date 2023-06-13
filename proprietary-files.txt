@@ -1094,33 +1094,6 @@ vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 -vendor/lib/libOmxSwVdec.so|6315cb84f8d15540f3b577646b243eb0bfb4be78
 -vendor/lib/libOmxSwVencMpeg4.so|577598f797ad6d18bf80279760a4c02bbcb2c532
 
-# Perf - from LA.UM.10.6.2.r1-02500-89xx.0
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|5981341dfa9cff2f42e8ae381bb319804767a66e
-vendor/bin/msm_irqbalance|33325d1b5bd1c4fdfa964f638da633ef8ca1ac43
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/lib/libperfconfig.so|49e1efadfec6acb8d847fe691f8f48623ccfaff0
-vendor/lib/libperfgluelayer.so|242e98ea9ac9d26cc9713670f9321d027a779de1
-vendor/lib/libqti-perfd-client.so|3b73b0f221ea0e5204b1e866cfcbdf5edd9fa856
-vendor/lib/libqti-perfd.so|8dc392e4ae386d9d30d9154800ec7c183888b750
-vendor/lib/libqti-util.so|a22110a723fe4b2e001db9f9e14873e86659fc3f
-vendor/lib/libqti-utils.so|ce03aa9f2573a0d70254b860e172a721afb2daf1
-vendor/lib64/liblearningmodule.so|12c3e1dd1be4d43bf29194428446afa8dbdf1a2a
-vendor/lib64/libperfconfig.so|252d05283fc7a070f0516ebd0e63f9e17b0fbf61
-vendor/lib64/libperfgluelayer.so|c0de76c678a5e7d1909910aa57873711cdd3f124
-vendor/lib64/libqti-perfd-client.so|955130c37295d3b7f196cbdc0996ff029953a158
-vendor/lib64/libqti-perfd.so|16e47121750100c6ca95498fb1d097969ffbf1ed
-vendor/lib64/libqti-util.so|acce7e3b34e80ec9b66f3e82a7612d009c8944da
-vendor/lib64/libqti-utils.so|600fc452bb79aab22db3722e61e8acbb49a04b1a
-
-# Perf (configs) - from LA.UM.10.6.2.r1-02500-89xx.0
-vendor/etc/perf/commonresourceconfigs.xml|827c63cb52552af0c19a4735430f98334e1760bf
-vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
-vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
-vendor/etc/perf/perfboostsconfig.xml|16dcdf609d5bf2fd839162884111585305f17f7c
-vendor/etc/perf/perfconfigstore.xml|a53be50dbf91c78daf1cddcd3539ffc8ea0902c0
-vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
-vendor/etc/perf/targetresourceconfigs.xml|d72216867a557eb37b14a1975da40ff0225b6c55
-
 # Peripheral manager - from LA.UM.10.6.2.r1-02500-89xx.0
 vendor/bin/pm-proxy|7b897d3a4aae8297a0e0b54bdcf5f0a8ef3f7a97
 vendor/bin/pm-service|45cf641ec40478289aed906209f01418d67a09ac
