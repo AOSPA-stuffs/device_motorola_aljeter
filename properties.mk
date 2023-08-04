@@ -132,7 +132,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.audio.sink=280 \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
-    vendor.mm.enable.qcom_parser=4176895 \
     vendor.vidc.dec.downscalar_width=1920 \
     vendor.vidc.dec.downscalar_height=1088 \
     vendor.vidc.enc.disable_bframes=1 \
