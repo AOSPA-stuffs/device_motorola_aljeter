@@ -161,9 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-impl.recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -289,6 +287,7 @@ PRODUCT_COPY_FILES += \
 TARGET_COMMON_QTI_COMPONENTS += \
     av \
     bt \
+    charging \
     gps \
     perf
 
