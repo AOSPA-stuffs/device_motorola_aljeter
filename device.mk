@@ -271,6 +271,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     perf \
     vibrator
 
+<<<<<<< HEAD
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
@@ -309,6 +310,12 @@ PRODUCT_PACKAGES += \
     librecovery_updater_motorola
 
 TARGET_RECOVERY_DENSITY := xhdpi
+
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+TARGET_NO_ABSTRUCT := true
 
 # Sensors
 PRODUCT_PACKAGES += \
