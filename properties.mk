@@ -118,12 +118,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.use_color_management=true
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.audio.sink=280 \

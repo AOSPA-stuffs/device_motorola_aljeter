@@ -96,6 +96,7 @@ PRODUCT_PACKAGES += \
     libwui
 
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.device@3.5 \
     android.hardware.camera.provider@2.5 \
     android.hardware.camera.provider@2.5-service
@@ -118,27 +119,12 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.msm8937 \
-    hwcomposer.msm8937 \
-    libdisplayconfig \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    memtrack.msm8937
-
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl:64 \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    android.frameworks.displayservice@1.0.vendor \
-    android.frameworks.sensorservice@1.0.vendor \
-    vendor.display.config@1.9 \
-    vendor.display.config@1.9.vendor
+    libtinyxml
 
 # Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
@@ -192,10 +178,6 @@ PRODUCT_COPY_FILES += \
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.msm8937
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -281,6 +263,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     av \
     bt \
     charging \
+    display \
     gps \
     perf \
     vibrator
