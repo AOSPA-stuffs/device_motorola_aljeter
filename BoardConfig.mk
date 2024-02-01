@@ -65,11 +65,6 @@ BOARD_NO_CHARGER_LED := true
 # Display
 TARGET_SCREEN_DENSITY := 300
 
-# GPU
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
-
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
