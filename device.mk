@@ -282,7 +282,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
     bt \
     charging \
     gps \
-    perf
+    perf \
+    vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -348,13 +349,6 @@ USE_DEX2OAT_DEBUG := false
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
