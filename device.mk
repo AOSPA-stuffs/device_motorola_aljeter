@@ -305,6 +305,9 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh
 
 # Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_motorola
+
 TARGET_RECOVERY_DENSITY := xhdpi
 
 # Sensors

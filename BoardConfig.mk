@@ -132,6 +132,7 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_motorola
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
