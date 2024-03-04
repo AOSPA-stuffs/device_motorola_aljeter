@@ -142,6 +142,10 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
+BOARD_SEPOLICY_M4DEFS += \
+    sysfs_battery_supply=vendor_sysfs_battery_supply \
+    sysfs_usb_supply=vendor_sysfs_usb_supply
+
 # Treble
 BOARD_VNDK_VERSION := current
 

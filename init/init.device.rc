@@ -45,3 +45,7 @@ on property:ro.boot.hardware.sku=XT1922-7
 
 on property:ro.boot.hardware.sku=XT1922-9
     setprop ro.opengles.version 196608
+
+    # Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
