@@ -28,5 +28,8 @@
 # Radio
 /data/vendor/misc/cutback(/.*)?                          u:object_r:cutback_ipc_file:s0
 
+# WIFI
+/(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service\.legacy u:object_r:hal_wifi_default_exec:s0
+
 # WLAN fwpath
 /sys/module/wlan/parameters/fwpath    u:object_r:sysfs_wlan_fwpath:s0
