@@ -1262,12 +1262,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 # Sensors
 vendor/bin/capsense_reset
 
-# TUI - from LA.UM.10.6.2.r1-02500-89xx.0
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|077cb264310cae5f11f3da047cf86b0e25744cdf
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|aa13712af4235579492343fd1fd2e74775b91ad2
-
 # Thermal - from LA.UM.10.6.2.r1-02500-89xx.0
 vendor/bin/thermal-engine|f22c96de880a0641c0ba65b78a95a0edfaf94f67
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
