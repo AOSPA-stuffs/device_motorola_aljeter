@@ -153,11 +153,6 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
 
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
-
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
@@ -269,7 +264,6 @@ TARGET_COMMON_QTI_COMPONENTS += \
     perf \
     vibrator
 
-<<<<<<< HEAD
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
@@ -277,11 +271,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     libsensorndkbridge \
-    librmnetctl \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
+    librmnetctl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -342,7 +332,6 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # Always preopt extracted APKs to prevent extracting out of the APK
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-DONT_DEXPREOPT_PREBUILTS := true
 USE_DEX2OAT_DEBUG := false
 
 # USB
