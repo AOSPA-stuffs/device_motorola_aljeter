@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Adreno
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno \
-    ro.hardware.vulkan=adreno
+    ro.hardware.vulkan=adreno \
+    ro.opengles.version=196610
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
