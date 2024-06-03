@@ -304,12 +304,6 @@ PRODUCT_PACKAGES += \
 
 TARGET_RECOVERY_DENSITY := xhdpi
 
-# Remove packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
-TARGET_NO_ABSTRUCT := true
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
